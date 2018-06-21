@@ -23,6 +23,8 @@ class Messages extends MX_Controller {
 	var $redirect = '/messages';							// default redirect
 	var $permissions = array();
 	var $partials = array();
+	var $data = array();
+	var $output = array();
 
 	function __construct()
 	{
