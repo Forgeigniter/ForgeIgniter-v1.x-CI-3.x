@@ -1,8 +1,42 @@
-www - FI-20-CI3-Close to complete
-
 # ForgeIgniter CHANGE LOG
+# ForgeIgniter v1.x
 # CodeIgniter 3.x Branch
 --------------------------
+
+## Version 1.3
+
+- Community
+	¬ Fixed: user with no avatar, image link broken.
+	¬ Fixed: Reading/Sending Messages.
+	¬ Fixed: Search returning Null
+	¬ Fixed: Issue on sign up form (Passwords not matching)
+	¬ Fixed: Illegal string offset
+	¬ Fixed: Cannot assign an empty string to a string offset
+	¬ Fixed: Unknown column 'FI_t1 .messageID' in 'on clause'
+	¬ Fixed: Unknown column 't1.siteID' in 'where clause'
+	
+- Images / Files
+	¬ Fixed: In some cases when editing an image, img path wrong.
+	¬ Fixed: Illegal string offsets.
+	¬ Fixed: Undefined index.
+	¬ Fixed: options selector displaying wrong value.
+	
+- Shop
+	¬ Update: Reorder Body & Excerpt.
+	¬ Added: Preview for Excerpt.
+
+- Events
+	¬ Update: Reorder Body & Excerpt.
+	¬ Added: Preview for Excerpt.
+	
+- ForgeIgniter
+	¬ Updated: Support for PHP 7.1
+	¬ Fixed: Template Lib - Typo - Gallery
+
+- CodeIgniter
+	¬ Updated to v3.1.9 http://www.codeigniter.com/user_guide/changelog.html
+
+--------------------
 
 ## Version 1.2
 
@@ -17,7 +51,9 @@ www - FI-20-CI3-Close to complete
 - CodeIgniter
 	¬ Updated to v3.1.5 http://www.codeigniter.com/user_guide/changelog.html
 
-## Version 1.1 - Development
+--------------------
+
+## Version 1.1
 
 - ForgeIgniter
 	¬ Added: Missing Files
@@ -87,6 +123,8 @@ www - FI-20-CI3-Close to complete
 
 - CodeIgniter
 	¬ Updated to v2.2.6 (http://www.codeigniter.com/userguide2/changelog.html)
+	
+--------------------
 
 ## Version 0.2
 
