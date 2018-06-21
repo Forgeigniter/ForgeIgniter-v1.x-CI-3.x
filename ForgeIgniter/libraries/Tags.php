@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
 /**
  * ForgeIgniter
  *
@@ -11,6 +11,7 @@
  * @license		http://forgeigniter.com/license
  * @link		http://forgeigniter.com/
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 // ------------------------------------------------------------------------
 

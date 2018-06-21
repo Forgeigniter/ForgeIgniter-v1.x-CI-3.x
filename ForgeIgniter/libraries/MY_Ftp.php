@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
 /**
  * CodeIgniter
  *
@@ -12,6 +12,7 @@
  * @since		Version 1.0
  * @filesource
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 // ------------------------------------------------------------------------
 
@@ -23,9 +24,9 @@
  * @category	Libraries
  * @author		ExpressionEngine Dev Team
  * @link		http://codeigniter.com/userguide2/libraries/ftp.html
- */ 
+ */
 class MY_FTP extends CI_FTP {
-	
+
 	/**
 	 * Read a directory and recreate it remotely
 	 *
@@ -37,7 +38,7 @@ class MY_FTP extends CI_FTP {
 	 * @param	string	path to source with trailing slash
 	 * @param	string	path to destination - include the base folder with trailing slash
 	 * @return	bool
-	 */	
+	 */
 	function mirror($locpath, $rempath)
 	{
 		if ( ! $this->_is_conn())
@@ -57,12 +58,12 @@ class MY_FTP extends CI_FTP {
 					return FALSE;
 				}
 			}
-		
+
 			// Recursively read the local directory
 			while (FALSE !== ($file = readdir($fp)))
 			{
 				if (@is_dir($locpath.$file) && substr($file, 0, 1) != '.')
-				{					
+				{
 					$this->mirror($locpath.$file."/", $rempath.$file."/");
 				}
 				elseif ($file == ".htaccess")
@@ -74,13 +75,13 @@ class MY_FTP extends CI_FTP {
 					// Get the file extension so we can se the upload type
 					$ext = $this->_getext($file);
 					$mode = $this->_settype($ext);
-					
+
 					$this->upload($locpath.$file, $rempath.$file, $mode);
 				}
 			}
 			return TRUE;
 		}
-		
+
 		return FALSE;
 	}
 
