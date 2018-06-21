@@ -17,7 +17,7 @@ $(function(){
 		$('div#upload-zip:visible, div#loader:visible').slideToggle('400');
 	});
 
-	$('.toggle-zip').click(function(event){ 
+	$('.toggle-zip').click(function(event){
 		event.preventDefault();
 		$('div#upload-zip').slideToggle('400');
 		$('div#upload-image:visible, div#loader:visible').slideToggle('400');
@@ -66,7 +66,7 @@ $(function(){
 	</label>
 
 	<?php
-		$options = '';
+		$options = NULL;
 		$options['me'] = 'My Images';
 		if (@in_array('images_all', $this->permission->permissions)):
 			$options['all'] = 'View All Images';
