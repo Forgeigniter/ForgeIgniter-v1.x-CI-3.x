@@ -54,6 +54,7 @@
 						<?php if ($this->session->userdata('groupID') == $this->site->config['groupID'] || $this->session->userdata('groupID') < 0): ?>
 							<li><a href="<?php echo site_url('/admin/site/'); ?>">My Site</a></li>
 							<li><a href="<?php echo base_url('/static/docs'); ?>" target="_blank">Docs</a></li>
+							<li><a href="<?php echo site_url('/admin/sysinfo/'); ?>">System Info</a></li>
 						<?php endif; ?>
 						<?php if ($this->session->userdata('groupID') < 0 && @file_exists(APPPATH.'modules/forge/controllers/forge.php')): ?>
 							<li class="noborder"><a href="<?php echo site_url('/admin/logout'); ?>">Logout</a></li>

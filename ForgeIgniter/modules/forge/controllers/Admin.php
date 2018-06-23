@@ -559,4 +559,48 @@ class Admin extends MX_Controller {
 		return $output;
 	}
 
+	public function sysinfo ()
+	{
+		// logout if not admin
+		if (!$this->session->userdata('session_admin'))
+		{
+			redirect('/admin/login/'.$this->core->encode($this->uri->uri_string()));
+		}
+
+		// check they are administrator
+		if ($this->session->userdata('groupID') != $this->site->config['groupID'] && $this->session->userdata('groupID') >= 0)
+		{
+			redirect('/admin/dashboard/permissions');
+		}
+
+		$output = NULL;
+
+		// PHP Info.
+		$output['data']['phpInfo'] = $this->_set_phpinfo_style();
+
+		// templates
+		$this->load->view($this->includes_path.'/header');
+		$this->load->view('sysinfo',$output);
+		$this->load->view($this->includes_path.'/footer');
+	}
+
+
+	protected function _set_phpinfo_style()
+	{
+		//Thanks to Phelon Dudras For guidance http://us.php.net/manual/en/function.phpinfo.php#87287
+
+		ob_start();
+		date_default_timezone_set('UTC');
+		phpinfo(INFO_GENERAL | INFO_CONFIGURATION | INFO_MODULES | INFO_ENVIRONMENT | INFO_VARIABLES);
+		$phpInfo = ob_get_contents();
+		ob_end_clean();
+
+		preg_match_all('#<body[^>]*>(.*)</body>#siU', $phpInfo, $output);
+
+		$output = preg_replace('#<table[^>]*>#', '<table class="table table-hover">', $output[1][0]);
+		$output = preg_replace('#(\w),(\w)#', '\1, \2', $output);
+
+		return $output;
+	}
+
 }
