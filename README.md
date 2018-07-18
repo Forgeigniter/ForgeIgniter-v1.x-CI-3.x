@@ -22,5 +22,5 @@ https://github.com/Forgeigniter/ForgeIgniter-CI-3.x/tree/v2.x
 
 ## ForgeIgniter-CI-4.x - Version (Codename: Reignited)
 
-# Contributors 
+## Contributors 
 Stu Green, Jesse Orndorff, Reconix
