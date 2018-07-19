@@ -18,5 +18,6 @@ $route['admin/tracking_ajax'] = 'forge/admin/tracking_ajax';
 $route['admin/activity'] = 'forge/admin/activity';
 $route['admin/activity_ajax'] = 'forge/admin/activity_ajax';
 $route['admin/backup'] = 'forge/admin/backup';
+$route['admin/sysinfo'] = 'forge/admin/sysinfo';
 
 ?>
