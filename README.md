@@ -1,6 +1,8 @@
 # ForgeIgniter v1.x - CI-3.x 
 Friendly open source CMS forged on Codeigniter 3
 
+This version is now discontinued, please check version 2 or 3 for updates.
+
 ## Installation
 To get started just upload all the files from ForgeIgniter to your webserver and go to your [www.domain.net]  
 the installer will handle the rest for you.
