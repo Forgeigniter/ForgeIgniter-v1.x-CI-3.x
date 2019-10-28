@@ -21,6 +21,8 @@ https://github.com/Forgeigniter/ForgeIgniter-CI-3.x/tree/v2.x
 - PHP 7.1 / 5.6
 
 ## ForgeIgniter-CI-4.x - Version (Codename: Reignited)
+Rebuilt version running on Codeigniter 4
+https://github.com/Forgeigniter/ForgeIgniter-CI-4.x
 
 ## Contributors 
 Stu Green, Jesse Orndorff, Reconix
